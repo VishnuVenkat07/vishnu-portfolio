@@ -1261,4 +1261,21 @@ html, body {
     display: flex;
   }
 }
+/*--------about moble view-------*/
+.about__container {
+  display: grid;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .about__container {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+
+  .about__content,
+  .about__content :is(.section__header, .section__description) {
+    text-align: left;
+  }
+}
 
