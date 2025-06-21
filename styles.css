@@ -1209,3 +1209,56 @@ nav {
   margin: auto;
 }
 
+/*-------phone mode---------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+  .intro-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .intro-section .text {
+    width: 100%;
+  }
+
+  .image-container {
+    margin-bottom: 20px;
+  }
+}
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .navbar-menu {
+    display: none;
+    flex-direction: column;
+  }
+
+  .menu-toggle.open + .navbar-menu {
+    display: flex;
+  }
+}
+
