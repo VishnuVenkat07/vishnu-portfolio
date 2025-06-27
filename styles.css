@@ -1163,6 +1163,8 @@ nav {
   border-radius: 8px;
   border: 1px solid #ccc;
   font-size: 15px;
+  resize: vertical;
+  width: 80%;
   }
 
   .send-options {
