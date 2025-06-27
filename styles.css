@@ -204,30 +204,30 @@ nav {
   gap: 2rem;
 }
 
-.about__image {
+.about__imagev {
   position: relative;
   isolation: isolate;
   max-width: 400px;
   margin: auto;
 }
 
-.about__img {
+.about__image {
   border-radius: 100%;
 }
 
-.about__bg-1,
-.about__bg-2 {
+.about__b-1,
+.about__b-2 {
   position: absolute;
-  max-width: 150px;
+  max-width: 200px; 
   z-index: -1;
 }
 
-.about__bg-1 {
+.about__b-1 {
   top: 0;
   left: 0;
 }
 
-.about__bg-2 {
+.about__b-2 {
   right: 0;
   bottom: 0;
 }
@@ -852,7 +852,7 @@ nav {
   margin-top: 0;
   margin-bottom: 10px;
   font-size: 22px;
-  color: #7dc40a;
+  color: #c4980a;
   text-align: center;
 }
 
@@ -1076,13 +1076,6 @@ nav {
 }
 
 
-/* Global box-sizing reset */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
 /*--------------form-----------*/
 .form-wrapper {
   display: flex;
@@ -1110,9 +1103,6 @@ nav {
   border-radius: 8px;
   border: 1px solid #ccc;
   font-size: 15px;
-  resize: vertical;
-  width: 100%;
-  max-width: 100%; /* ✅ Prevent overflow */
 }
 
 .contact__form textarea {
@@ -1168,7 +1158,11 @@ nav {
 
   .contact__form input,
   .contact__form textarea {
-    font-size: 14px;
+   
+    padding: 12px 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 15px;
   }
 
   .send-options {
@@ -1181,8 +1175,6 @@ nav {
     font-size: 14px;
   }
 }
-
-
 .contact__socials {
   display: flex;
   flex-wrap: wrap;
@@ -1315,8 +1307,7 @@ html, body {
 }
 /* Make text readable on all devices */
 .section__v2,
-.section__v1,
-.section__description {
+.section__v1 {
   font-size: 1rem;       /* Adjusted for mobile readability */
   line-height: 1.6;
   padding: 1rem;
@@ -1330,7 +1321,7 @@ html, body {
   .section__v1,
   .section__description {
     font-size: 0.95rem;
-    padding: rem;
+    padding: 1rem;
     line-height: 1.6;
     text-align: justify;
   }
@@ -1374,5 +1365,6 @@ html, body {
 .about__img {
   width: 100%;
   max-width: 350px;
-  border-radius: 50%;
+  border-radius: 100%;
 }
+
