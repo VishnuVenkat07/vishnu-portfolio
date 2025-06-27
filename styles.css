@@ -1147,6 +1147,32 @@ nav {
   color: white;
 }
 
+/* Responsive fix for mobile view */
+@media (max-width: 480px) {
+  .form-wrapper {
+    padding: 20px 10px;
+  }
+
+  .contact__form {
+    padding: 20px 15px;
+    gap: 12px;
+  }
+
+  .contact__form input,
+  .contact__form textarea {
+    font-size: 14px;
+  }
+
+  .send-options {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .send-options button {
+    width: 100%;
+    font-size: 14px;
+  }
+}
 
 .contact__socials {
   display: flex;
