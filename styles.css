@@ -1076,6 +1076,13 @@ nav {
 }
 
 
+/* Global box-sizing reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 /*--------------form-----------*/
 .form-wrapper {
   display: flex;
@@ -1105,6 +1112,7 @@ nav {
   font-size: 15px;
   resize: vertical;
   width: 100%;
+  max-width: 100%; /* ✅ Prevent overflow */
 }
 
 .contact__form textarea {
@@ -1147,7 +1155,7 @@ nav {
   color: white;
 }
 
-/* Responsive fix for mobile view */
+/* ✅ Responsive fix for mobile view */
 @media (max-width: 480px) {
   .form-wrapper {
     padding: 20px 10px;
@@ -1173,6 +1181,7 @@ nav {
     font-size: 14px;
   }
 }
+
 
 .contact__socials {
   display: flex;
