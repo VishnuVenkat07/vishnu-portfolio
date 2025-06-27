@@ -584,21 +584,29 @@ sr.reveal('.section__v1', { delay: 200 });
     const welcomePopup = document.getElementById("welcome-popup");
     const welcomeClose = document.getElementById("welcome-close");
 
-    // ✅ Show the welcome popup automatically
-    welcomePopup.style.display = "block";
+    // ✅ Show the popup only if not previously closed
+    if (!localStorage.getItem("welcomePopupClosed")) {
+      welcomePopup.style.display = "block";
+    }
 
     // Close logic
     welcomeClose.addEventListener("click", () => {
       welcomePopup.style.display = "none";
+
+      // ✅ Save state to localStorage so it won't show again
+      localStorage.setItem("welcomePopupClosed", "true");
     });
 
+    // Also close when clicking outside the popup (optional)
     window.addEventListener("click", (e) => {
       if (e.target === welcomePopup) {
         welcomePopup.style.display = "none";
+        localStorage.setItem("welcomePopupClosed", "true");
       }
     });
   });
 </script>
+
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
